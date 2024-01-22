@@ -1,13 +1,14 @@
 <template>
-  <HeaderComponent />
+  <AppHeader></AppHeader>
+  <router-view></router-view>
 </template>
 
 <script>
-import HeaderComponent from "./components/HeaderComponent.vue";
+import AppHeader from "./components/AppHeader.vue";
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
+    AppHeader,
   },
   data() {
     return {
