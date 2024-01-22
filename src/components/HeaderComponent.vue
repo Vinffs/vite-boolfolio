@@ -13,6 +13,7 @@ import axios from 'axios';
 import { store } from '../assets/data/store';
 export default {
   name: 'HeaderComponent',
+
   data() {
     return {
       store,
