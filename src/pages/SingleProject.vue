@@ -1,6 +1,7 @@
 <template>
   <div>
-    This is the Single Post
+    <h1>{{ project.title }}</h1>
+    <img :src="`${store.imgPath}${project.thumb}`" :alt="project.title">
   </div>
 </template>
 
@@ -12,13 +13,14 @@ export default {
   data() {
     return {
       store,
+      project: "",
     }
   },
   methods: {
     getProjectData() {
-      // axios.get(`${this.store.apiUrl}projects/${this.$route.params.slug}`).then((response) => {
-      //   console.log(response);
-      // });
+      axios.get(this.store.apiUrl + "projects/" + this.$route.params.slug).then((res) => {
+        this.project = res.data.results;
+      })
     }
   },
   mounted() {
