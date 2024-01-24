@@ -2,6 +2,10 @@
   <div>
     <h1>{{ project.title }}</h1>
     <img :src="`${store.imgPath}${project.thumb}`" :alt="project.title">
+    <div>
+      <router-link :to="{ name: 'single-project', params: { slug: 'htmlcss-discord' } }">vedi altro
+        progetto</router-link>
+    </div>
   </div>
 </template>
 
